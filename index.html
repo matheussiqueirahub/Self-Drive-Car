@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-driving Car - Neural Evolution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <canvas id="carCanvas"></canvas>
+        
+        <div id="controlPanel">
+            <h2>🚗 Neural Drive</h2>
+            
+            <div class="stat-item">
+                <div class="stat-label">Generation</div>
+                <div class="stat-value" id="generation">1</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-label">Population</div>
+                <div class="stat-value" id="population">100</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-label">Best Distance</div>
+                <div class="stat-value" id="bestDistance">0</div>
+                <span class="info-badge">meters</span>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-label">Alive Cars</div>
+                <div class="stat-value" id="aliveCars">100</div>
+            </div>
+            
+            <div class="button-group">
+                <button class="primary" onclick="save()">💾 Save Best Brain</button>
+                <button class="secondary" onclick="resetGeneration()">🔄 Reset Generation</button>
+                <button class="danger" onclick="discard()">🗑️ Delete Saved</button>
+            </div>
+        </div>
+        
+        <canvas id="networkCanvas"></canvas>
+    </div>
+    
+    <script src="visualizer.js"></script>
+    <script src="network.js"></script>
+    <script src="sensor.js"></script>
+    <script src="utils.js"></script>
+    <script src="road.js"></script>
+    <script src="controls.js"></script>
+    <script src="car.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
